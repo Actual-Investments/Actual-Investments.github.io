@@ -76,7 +76,7 @@ menu_items = [
 # Your Calendly scheduling link. Create a free account at https://calendly.com,
 # make an event type (e.g. "Onboarding Call"), then paste its link here.
 # It looks like: https://calendly.com/your-name/onboarding-call
-calendly_url = "https://calendly.com/your-account/onboarding-call"
+calendly_url = "https://calendly.com/loganmcclain59/30min"
 
 # Your Web3Forms access key. Get a free key in seconds at
 # https://web3forms.com  — enter the email you want submissions sent to and it
