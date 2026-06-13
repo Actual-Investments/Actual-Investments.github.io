@@ -1,0 +1,24 @@
+{# ---------------------------------------------------------------------------
+   Calendly inline booking widget.
+   Reads the scheduling link from config.extra.calendly_url.
+   The widget script is injected by static/js/referral.js AFTER the referral
+   code has been appended to the URL, so every booking is attributed.
+--------------------------------------------------------------------------- #}
+{% if config.extra.calendly_url and config.extra.calendly_url is not containing("your-account") %}
+<link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+<div
+    class="calendly-inline-widget"
+    data-calendly-url="{{ config.extra.calendly_url }}"
+    style="min-width:320px;height:680px;"></div>
+<noscript>
+    <a class="cta-button" href="{{ config.extra.calendly_url }}" target="_blank" rel="noopener">
+        Open the booking calendar
+    </a>
+</noscript>
+{% else %}
+<div class="config-warning">
+    <strong>Booking calendar not configured yet.</strong>
+    Set <code>calendly_url</code> in <code>config.toml</code> to your Calendly link
+    (create a free account at <code>calendly.com</code>) and this calendar will appear here.
+</div>
+{% endif %}

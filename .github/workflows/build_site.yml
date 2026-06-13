@@ -1,42 +1,39 @@
-on:
-  workflow_dispatch:
-  push:
-    tags: '*'
-    branches:
-      - main
+# Builds the Zola site and publishes it to GitHub Pages.
+# Runs automatically on every push to the V3 branch, or manually from the
+# Actions tab ("Run workflow").
+name: Build and deploy GitHub Pages
 
+on:
+  push:
+    branches: [V3]
+  workflow_dispatch:
+
+# Permissions needed to publish to GitHub Pages.
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
+# Only run one deploy at a time; cancel an in-progress one if a newer push lands.
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
-name: Build and deploy GH Pages
 jobs:
-  build-site:
+  build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
-      - name: checkout
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Write Changelogs
-        run: |
-          ./buildSite --repository ${{ github.repository }} --changelog
-
-      - name: Build Zola + upload Pages artifact
+      - name: Build with Zola and upload Pages artifact
         uses: getzola/github-pages@066755243e69f508fd1a74739fbf1a65f656c790
         with:
           zola_version: v0.22.1
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
-    needs: build-site
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -44,75 +41,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  release_cleanup:
-    uses: DreamWeave-MP/StroggForge/.github/workflows/createRelease.yml@v6
-    secrets: inherit
-
-  build-mods:
-    needs: release_cleanup
-    runs-on: ubuntu-latest
-    outputs:
-      nexus-matrix: ${{ steps.nexus-matrix.outputs.matrix }}
-    steps:
-      - name: checkout
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
-
-      - name: Build Releases
-        run: |
-          ARGS="--repository ${{ github.repository }} --build --changelog --release ${{ needs.release_cleanup.outputs.release_name }} "
-
-          if [ "${{ needs.release_cleanup.outputs.release_name }}" != 'development' ]; then
-            # Sensitive to multiple hyphens in tag name — use underscores in mod names instead
-            ARGS+="--tag $( echo ${{ needs.release_cleanup.outputs.release_name }} | cut -f 1 -d '-') "
-          fi
-
-          ./buildSite $ARGS
-
-      - name: Set Nexus upload matrix
-        id: nexus-matrix
-        run: |
-          matrix=$(jq -c '[.mods[] | select(.nexus_group_id) | {slug, nexus_group_id, version, title}]' dist/*.modManifest)
-          echo "matrix=$matrix" >> $GITHUB_OUTPUT
-
-      - name: Upload dist artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: dist
-          path: dist/
-
-      - name: Upload releases
-        uses: softprops/action-gh-release@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ needs.release_cleanup.outputs.release_name }}
-          prerelease: ${{ github.ref_type != 'tag' }}
-          files: |
-            dist/*.zip
-            dist/*.modManifest
-
-  nexus-upload:
-    needs: build-mods
-    if: github.ref_type == 'tag' && needs.build-mods.outputs.nexus-matrix != '' && needs.build-mods.outputs.nexus-matrix != '[]'
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        mod: ${{ fromJson(needs.build-mods.outputs.nexus-matrix) }}
-    steps:
-      - name: Download dist artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist/
-
-      - name: Upload to NexusMods
-        uses: Nexus-Mods/upload-action@main
-        with:
-          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
-          file_group_id: ${{ matrix.mod.nexus_group_id }}
-          filename: dist/${{ matrix.mod.slug }}.zip
-          version: ${{ matrix.mod.version }}
-          display_name: ${{ matrix.mod.title }}

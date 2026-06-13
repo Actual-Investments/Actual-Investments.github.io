@@ -1,0 +1,310 @@
+// ===========================================================================
+//  Actual Investments — landing page styles
+//  Uses the theme's color variables: --accent, --background, --color,
+//  --border-color, --accent-alpha-20, --accent-alpha-70.
+// ===========================================================================
+
+$phone-max-width: 683px;
+
+.landing {
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 3rem 0;
+  }
+
+  section {
+    scroll-margin-top: 1.5rem; // so anchor jumps aren't hidden under the header
+  }
+
+  h2 {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.section-lead {
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+// --- Hero --------------------------------------------------------------------
+.hero {
+  text-align: center;
+  padding: 2rem 0 1rem;
+
+  &__title {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    line-height: 1.1;
+    margin: 0 0 1rem;
+  }
+
+  &__subtitle {
+    max-width: 38rem;
+    margin: 0 auto 1.75rem;
+    font-size: 1.15rem;
+    opacity: 0.9;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+// --- Call-to-action buttons --------------------------------------------------
+.cta-button {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--background);
+  padding: 0.7em 1.4em;
+  border-radius: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  &--ghost {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    padding: calc(0.7em - 2px) calc(1.4em - 2px);
+  }
+}
+
+// --- Feature cards -----------------------------------------------------------
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  background: var(--accent-alpha-20);
+
+  h3 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+
+  p {
+    margin-bottom: 0;
+    opacity: 0.9;
+  }
+}
+
+// --- How it works ------------------------------------------------------------
+.steps {
+  line-height: 1.7;
+  padding-left: 1.2rem;
+
+  li {
+    margin-bottom: 0.6rem;
+  }
+}
+
+// --- Pricing -----------------------------------------------------------------
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.plan {
+  position: relative;
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &--featured {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+  }
+
+  &__badge {
+    position: absolute;
+    top: -0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: var(--background);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25em 0.8em;
+    border-radius: 1em;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  &__name {
+    margin: 0 0 0.5rem;
+  }
+
+  &__price {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--accent);
+    margin: 0 0 1rem;
+
+    span {
+      font-size: 1rem;
+      opacity: 0.7;
+      font-weight: normal;
+    }
+  }
+
+  &__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    text-align: left;
+
+    li {
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border-color);
+
+      &::before {
+        content: "✓ ";
+        color: var(--accent);
+      }
+    }
+  }
+
+  .cta-button {
+    margin-top: auto;
+  }
+}
+
+// --- FAQ ---------------------------------------------------------------------
+details {
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.6rem;
+
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  p {
+    margin: 0.75rem 0 0.25rem;
+    opacity: 0.9;
+  }
+
+  &[open] summary {
+    color: var(--accent);
+  }
+}
+
+// --- Contact form ------------------------------------------------------------
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 34rem;
+
+  label {
+    margin: 0.75rem 0 0.25rem;
+    font-weight: bold;
+
+    .optional {
+      font-weight: normal;
+      opacity: 0.6;
+    }
+  }
+
+  input,
+  textarea {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: 0.4rem;
+    color: var(--color);
+    padding: 0.6rem 0.7rem;
+    font: inherit;
+
+    &:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+  }
+
+  button {
+    margin-top: 1.25rem;
+    align-self: flex-start;
+    background: var(--accent);
+    color: var(--background);
+    border: none;
+    border-radius: 2em;
+    padding: 0.7em 1.6em;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.form-status {
+  margin-top: 0.75rem;
+  min-height: 1.2em;
+
+  &.success {
+    color: var(--accent);
+  }
+
+  &.error {
+    color: #ff6b6b;
+  }
+}
+
+// --- "Not configured yet" notice (shown until Calendly/Web3Forms are set) ----
+.config-warning {
+  border: 1px dashed var(--accent);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  background: var(--accent-alpha-20);
+
+  code {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.1em 0.3em;
+    border-radius: 0.25em;
+  }
+}
+
+.calendly-inline-widget {
+  margin: 1rem 0;
+}
+
+// --- Footer disclaimer -------------------------------------------------------
+.footer-disclaimer {
+  max-width: 46rem;
+  margin: 0.75rem auto 0;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  text-align: center;
+  line-height: 1.5;
+}
+
+// --- Small screens -----------------------------------------------------------
+@media (max-width: $phone-max-width) {
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
