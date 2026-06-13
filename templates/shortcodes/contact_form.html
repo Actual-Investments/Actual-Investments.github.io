@@ -7,11 +7,12 @@
 
 <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="050fb450-e37d-43bc-97f5-322072bf6abc">
-    <input name="subject" value="New onboarding enquiry — Actual Investments">
-    <input name="from_name" value="Actual Investments website">
+    <input type="hidden" name="subject" value="New onboarding enquiry — Actual Investments">
+    <input type="hidden" name="from_name" value="Actual Investments website">
 
     {# Filled in automatically from ?ref=CODE by referral.js #}
-    <input name="referral_code" id="referral-field" value="">
+    <label for="referral_code">Referral Code</label>
+    <input id="referral_code" name="referral_code" id="referral-field" value="">
 
     {# Honeypot: hidden field that real users never fill, bots do. Blocks spam. #}
     <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;">
