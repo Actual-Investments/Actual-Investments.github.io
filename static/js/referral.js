@@ -16,7 +16,7 @@
  * ======================================================================== */
 (function () {
   "use strict";
-
+  
   var STORAGE_KEY = "ai_referral_code";
 
   // --- 1. Work out the current referral code --------------------------------
