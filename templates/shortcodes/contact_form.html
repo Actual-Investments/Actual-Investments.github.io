@@ -4,7 +4,7 @@
    Submissions are sent by JavaScript (see static/js/referral.js) so the visitor
    stays on the page, and the captured referral code is included automatically.
 --------------------------------------------------------------------------- #}
-{% if config.extra.web3forms_key and config.extra.web3forms_key is not containing("YOUR-") %}
+
 <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
     <input name="access_key" value="050fb450-e37d-43bc-97f5-322072bf6abc">
     <input name="subject" value="New onboarding enquiry — Actual Investments">
@@ -31,10 +31,3 @@
     <button type="submit">Request onboarding</button>
     <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
 </form>
-{% else %}
-<div class="config-warning">
-    <strong>Contact form not configured yet.</strong>
-    Get a free access key at <code>web3forms.com</code>, paste it into
-    <code>web3forms_key</code> in <code>config.toml</code>, and the form will appear here.
-</div>
-{% endif %}
