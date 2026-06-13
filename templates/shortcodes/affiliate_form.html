@@ -1,0 +1,34 @@
+{# ---------------------------------------------------------------------------
+   Affiliate / partner application form, handled by Web3Forms.
+   Same access key as the contact form. Submissions are sent in the background
+   by static/js/referral.js (it wires every form with class "js-form").
+--------------------------------------------------------------------------- #}
+<form id="affiliate-form" class="contact-form js-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="050fb450-e37d-43bc-97f5-322072bf6abc">
+    <input type="hidden" name="subject" value="New affiliate application — Actual Investments">
+    <input type="hidden" name="from_name" value="Actual Investments website">
+
+    {# Honeypot spam trap #}
+    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;">
+
+    <label for="af-name">Name</label>
+    <input id="af-name" type="text" name="name" required autocomplete="name">
+
+    <label for="af-email">Email</label>
+    <input id="af-email" type="email" name="email" required autocomplete="email">
+
+    <label for="af-platform">Where will you promote? <span class="optional">(e.g. YouTube, X, Telegram, Discord)</span></label>
+    <input id="af-platform" type="text" name="platform">
+
+    <label for="af-audience">Audience size <span class="optional">(optional)</span></label>
+    <input id="af-audience" type="text" name="audience_size">
+
+    <label for="af-desired-code">Desired referral code <span class="optional">(optional)</span></label>
+    <input id="af-desired-code" type="text" name="desired_code" placeholder="e.g. YOURNAME10">
+
+    <label for="af-message">Tell us about your audience and why you'd be a good fit</label>
+    <textarea id="af-message" name="message" rows="4"></textarea>
+
+    <button type="submit">Apply to become an affiliate</button>
+    <p class="form-status" role="status" aria-live="polite"></p>
+</form>

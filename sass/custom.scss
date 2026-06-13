@@ -301,10 +301,269 @@ details {
   line-height: 1.5;
 }
 
+// ===========================================================================
+//  Services, calculator, multi-row pricing, verification, affiliates, about
+// ===========================================================================
+
+// "How it works" line inside service cards
+.card__how {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.card-grid--tight {
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  margin-bottom: 1.5rem;
+}
+
+// --- Multi-row pricing -------------------------------------------------------
+.pricing-group {
+  margin: 2.5rem 0 1rem;
+}
+
+.pricing-group__title {
+  font-size: 1.3rem;
+  margin: 0 0 0.25rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 0.6rem;
+}
+
+.pricing-group__tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--accent);
+  color: var(--background);
+  border-radius: 1em;
+  padding: 0.15em 0.7em;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.pricing-group__desc {
+  opacity: 0.8;
+  margin: 0 0 1rem 0.6rem;
+}
+
+.plan__save {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin: -0.5rem 0 0.75rem;
+}
+
+.pricing-lifetime {
+  margin-top: 2.5rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: var(--accent-alpha-20);
+}
+
+.pricing-lifetime__title {
+  margin: 0 0 0.25rem;
+}
+
+.pricing-lifetime__price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+
+  span {
+    font-size: 1rem;
+    opacity: 0.7;
+    font-weight: normal;
+  }
+}
+
+.pricing-lifetime__desc {
+  opacity: 0.85;
+  max-width: 32rem;
+  margin: 0 auto 1rem;
+}
+
+// --- Verification ------------------------------------------------------------
+.verify-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+}
+
+.verify-card {
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+
+  .cta-button {
+    margin-top: auto;
+  }
+}
+
+.verify-embed {
+  margin: 0.75rem 0 1rem;
+}
+
+.verify-placeholder {
+  border: 1px dashed var(--accent-alpha-70);
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+// --- ROI / drawdown calculator ----------------------------------------------
+.roi-calc {
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+  padding: 1.5rem;
+  background: var(--accent-alpha-20);
+}
+
+.roi-calc__controls {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.roi-calc__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.roi-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.roi-chip {
+  background: transparent;
+  color: var(--color);
+  border: 1px solid var(--accent-alpha-70);
+  border-radius: 2em;
+  padding: 0.4em 1em;
+  cursor: pointer;
+  font: inherit;
+  transition: all 0.15s ease;
+
+  &:hover {
+    border-color: var(--accent);
+  }
+
+  &.is-active {
+    background: var(--accent);
+    color: var(--background);
+    border-color: var(--accent);
+    font-weight: bold;
+  }
+}
+
+.roi-calc input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.roi-calc__results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.75rem;
+}
+
+.roi-stat {
+  border: 1px solid var(--border-color);
+  border-radius: 0.6rem;
+  padding: 0.85rem 1rem;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.roi-stat__label {
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+.roi-stat__value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.roi-stat--accent {
+  border-color: var(--accent);
+
+  .roi-stat__value {
+    color: var(--accent);
+  }
+}
+
+.roi-stat--warn .roi-stat__value {
+  color: #ffb454;
+}
+
+.roi-calc__note {
+  margin: 1.25rem 0 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+// --- About page --------------------------------------------------------------
+.page {
+  h1 {
+    margin-top: 0;
+  }
+
+  section {
+    margin: 2rem 0;
+  }
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding: 0.35rem 0 0.35rem 1.6rem;
+    position: relative;
+
+    &::before {
+      content: "✓";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  }
+}
+
+.about-cta .cta-button {
+  margin-left: 0.5rem;
+}
+
 // --- Small screens -----------------------------------------------------------
 @media (max-width: $phone-max-width) {
   .hero__actions {
     flex-direction: column;
     align-items: center;
+  }
+
+  .roi-stat__value {
+    font-size: 1.3rem;
   }
 }

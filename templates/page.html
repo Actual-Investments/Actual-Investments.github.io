@@ -1,0 +1,14 @@
+{# Simple standalone page (e.g. the About page). Reuses the site header,
+   footer, styling and scripts from index.html, but renders a single page's
+   content instead of the landing sections. #}
+{% extends "index.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title }}{% endblock title %}
+
+{% block content %}
+<div class="landing">
+  <article class="page">
+    {{ page.content | safe }}
+  </article>
+</div>
+{% endblock content %}

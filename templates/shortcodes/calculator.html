@@ -1,0 +1,34 @@
+{# ---------------------------------------------------------------------------
+   ROI / drawdown projection calculator.
+   All the editable numbers live in static/js/calculator.js (CONFIG block).
+   Styling lives in sass/custom.scss (.roi-calc).
+--------------------------------------------------------------------------- #}
+<div class="roi-calc" id="roiCalc">
+  <div class="roi-calc__controls">
+    <div class="roi-calc__field">
+      <span class="roi-calc__label">1. Pick a strategy</span>
+      <div class="roi-chips" id="roiBots"></div>
+    </div>
+    <div class="roi-calc__field">
+      <span class="roi-calc__label">2. Pick an iFunds account</span>
+      <div class="roi-chips" id="roiAccounts"></div>
+    </div>
+    <div class="roi-calc__field">
+      <span class="roi-calc__label">3. Estimated monthly return: <strong id="roiRoiLabel">3%</strong></span>
+      <input type="range" id="roiSlider" min="0" max="10" step="0.1" value="3" aria-label="Estimated monthly return">
+    </div>
+  </div>
+  <div class="roi-calc__results">
+    <div class="roi-stat"><span class="roi-stat__label">Effective leverage (account ÷ cost)</span><span class="roi-stat__value" id="roiLeverage">×167</span></div>
+    <div class="roi-stat"><span class="roi-stat__label">Capital you trade</span><span class="roi-stat__value" id="roiExposure">$100,000</span></div>
+    <div class="roi-stat"><span class="roi-stat__label">Account cost (your risk)</span><span class="roi-stat__value" id="roiCost">$599</span></div>
+    <div class="roi-stat"><span class="roi-stat__label">Gross monthly profit</span><span class="roi-stat__value" id="roiGross">$3,000</span></div>
+    <div class="roi-stat roi-stat--accent"><span class="roi-stat__label">Your monthly profit (after 80% split)</span><span class="roi-stat__value" id="roiNet">$2,400</span></div>
+    <div class="roi-stat roi-stat--accent"><span class="roi-stat__label">Monthly ROI on cost</span><span class="roi-stat__value" id="roiRoi">400%</span></div>
+    <div class="roi-stat"><span class="roi-stat__label">Projected 12-month profit</span><span class="roi-stat__value" id="roiAnnual">$28,800</span></div>
+    <div class="roi-stat roi-stat--warn"><span class="roi-stat__label">Strategy max drawdown</span><span class="roi-stat__value" id="roiStratDd">8%</span></div>
+    <div class="roi-stat roi-stat--warn"><span class="roi-stat__label">Your max loss (capped at cost)</span><span class="roi-stat__value" id="roiDrawdown">−$599</span></div>
+  </div>
+  <p class="roi-calc__note">iFunds provides leverage up to 1:100 and caps your downside at the account cost. These figures are <strong>illustrative only</strong>: leverage amplifies losses as well as gains, returns are not guaranteed, and past performance does not predict future results.</p>
+</div>
+<script src="{{ get_url(path='js/calculator.js') }}" defer></script>
