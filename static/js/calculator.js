@@ -15,7 +15,7 @@ var CONFIG = {
 
   // Deposit amounts shown as preset buttons. The slider spans the
   // smallest to the largest of these.
-  deposits: [10000, 25000, 50000, 100000, 250000],
+  deposits: [250, 400, 700, 1600, 3000, 5000, 8500, 15000, 30000],
 
   // Which preset is selected when the page loads (index into the list above).
   defaultDeposit: 0

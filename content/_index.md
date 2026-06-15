@@ -21,7 +21,7 @@ use_toc = false
   <h1 class="hero__title">Automated trading, done properly.</h1>
   <p class="hero__subtitle">
     <!-- EDIT ME -->
-    Our flagship trading bot has averaged 2.89% per month and runs hands-free on
+    Our flagship trading bot has averaged 2.89% per month over the last 7 years and runs hands-free on
     your own account. With up to 10× leverage from our liquidity provider your
     deposit goes further — and your losses stay capped at what you put in.
   </p>
@@ -35,27 +35,27 @@ use_toc = false
 
 <section id="activation">
   <h2>Simple activation process</h2>
-  <p class="section-lead">Three steps from application to live automated trading. Most accounts activate within 24 hours. <!-- EDIT ME --></p>
+  <p class="section-lead">Three steps from application to live automated trading. <!-- EDIT ME --></p>
   <div class="steps-grid">
     <div class="step-card">
       <div class="step-card__head"><span class="step-card__num">1</span><h3>Apply for access</h3></div>
-      <p>Brief qualification form. We verify identity and ensure suitability.</p>
+      <p>Brief qualification form. We want to make sure that our automated trading solution is right for you.</p>
       <ul class="step-card__list"><li>Quick 5-minute application</li><li>Identity verification</li><li>Suitability assessment</li><li>Risk-tolerance check</li></ul>
     </div>
     <div class="step-card">
       <div class="step-card__head"><span class="step-card__num">2</span><h3>Fund your account</h3></div>
-      <p>Deposit with a regulated broker. You maintain full custody of your capital.</p>
-      <ul class="step-card__list"><li>Minimum $10,000 deposit <!-- EDIT ME --></li><li>Full custody control</li><li>Multiple payment methods</li></ul>
+      <p>Deposit with a recommended broker or prop trading firm. You maintain full custody of your account.</p>
+      <ul class="step-card__list"><li>Minimum $2500 deposit <!-- EDIT ME --></li><li>Full custody control</li><li>Multiple payment methods</li></ul>
     </div>
     <div class="step-card">
-      <div class="step-card__head"><span class="step-card__num">3</span><h3>Activate the bot</h3></div>
-      <p>Connect your account to our copier and automated trading begins.</p>
+      <div class="step-card__head"><span class="step-card__num">3</span><h3>Connect to our bot</h3></div>
+      <p>Connect your account to our copier and your fully automated trading begins.</p>
       <ul class="step-card__list"><li>Secure connection</li><li>Real-time monitoring</li><li>Automated trading starts</li><li>24/7 system operation</li></ul>
     </div>
   </div>
   <div class="callout-grid">
     <div class="callout"><h3>⚡ Fast activation</h3><p>Most traders are approved and trading within 24 hours. Our streamlined process gets you to live automated trading quickly while keeping verification thorough.</p></div>
-    <div class="callout"><h3>🛡️ Your capital, your control</h3><p>Your funds stay in your own regulated broker account. We only have trading access via the copier — we never hold, custody, or have withdrawal rights to your capital.</p></div>
+    <div class="callout"><h3>🛡️ Your capital, your control</h3><p>Your funds stay in your own broker or prop firm account. We can only send you trade signals — we can never hold, have custody of, or access your trading account.</p></div>
   </div>
 </section>
 
@@ -63,7 +63,7 @@ use_toc = false
 
 <section id="calculator">
   <h2>Project your returns</h2>
-  <p class="section-lead">See how 10× leverage turns the flagship bot's monthly return into ROI on your deposit. <!-- EDIT the numbers in static/js/calculator.js --></p>
+  <p class="section-lead">See how 10× leverage turns our flagship bot's monthly return into ROI on your deposit. <!-- EDIT the numbers in static/js/calculator.js --></p>
   {{ calculator() }}
   <p class="metacopier-link"><a href="https://metacopier.io" target="_blank" rel="noopener">Already have a trading account? Click here to go to our MetaCopier Signal Provider page →</a> <!-- EDIT ME: your MetaCopier page URL --></p>
 </section>
@@ -72,33 +72,33 @@ use_toc = false
 
 <section id="pricing">
   <h2>Pricing</h2>
-  <p class="section-lead">One flagship bot, simple ways to pay. <!-- EDIT ME --></p>
+  <p class="section-lead">One flagship bot, simple and transparent ways to pay. <!-- EDIT ME --></p>
   <div class="pricing-grid">
     <div class="plan">
       <h3 class="plan__name">Profit share</h3>
-      <p class="plan__price">20%<span>of profits</span></p>
+      <p class="plan__price">30%<span> of profits</span></p>
       <ul class="plan__features"><li>No upfront cost</li><li>We only earn when you do</li><li>Flagship bot</li></ul>
       <a class="cta-button" href="#book">Get started</a>
     </div>
     <div class="plan plan--featured">
       <p class="plan__badge">Most popular</p>
       <h3 class="plan__name">Monthly</h3>
-      <p class="plan__price">$59<span>/mo</span></p>
+      <p class="plan__price">$49<span>/mo</span></p>
       <ul class="plan__features"><li>Hands-off full copy</li><li>Cancel anytime</li><li>Flagship bot</li></ul>
       <a class="cta-button" href="#book">Subscribe</a>
     </div>
     <div class="plan">
       <h3 class="plan__name">Yearly</h3>
-      <p class="plan__price">$637<span>/yr</span></p>
-      <p class="plan__save">Save 10% vs monthly</p>
-      <ul class="plan__features"><li>Hands-off full copy</li><li>≈ $53/mo</li><li>Flagship bot</li></ul>
+      <p class="plan__price">$289<span>/yr</span></p>
+      <p class="plan__save">Save 50% vs monthly</p>
+      <ul class="plan__features"><li>Hands-off full copy</li><li>≈ $24/mo</li><li>Flagship bot</li></ul>
       <a class="cta-button" href="#book">Choose yearly</a>
     </div>
   </div>
   <div class="pricing-lifetime">
     <h3 class="pricing-lifetime__title">Lifetime access</h3>
     <p class="pricing-lifetime__price">$499 <span>one-time</span></p>
-    <p class="pricing-lifetime__desc">Pay once, keep the flagship bot for life. Ask us about multi-account pricing. <!-- EDIT ME --></p>
+    <p class="pricing-lifetime__desc">Pay once, access the flagship bot for life. <!-- EDIT ME --></p>
     <a class="cta-button" href="#contact">Ask about lifetime access</a>
   </div>
 </section>
@@ -124,7 +124,7 @@ use_toc = false
       <div class="verify-embed">
         <p class="verify-placeholder">Live Myfxbook widget goes here.</p>
       </div>
-      <a class="cta-button cta-button--ghost" href="https://www.myfxbook.com/members/YOURNAME" target="_blank" rel="noopener">View Myfxbook account</a>
+      <a class="cta-button cta-button--ghost" href="https://www.myfxbook.com/members/AnActualBanana" target="_blank" rel="noopener">View Myfxbook account</a>
       <!-- EDIT ME: replace the link above with your real Myfxbook page. -->
     </div>
   </div>
