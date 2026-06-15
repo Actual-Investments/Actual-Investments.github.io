@@ -53,6 +53,6 @@ use_toc = false
   <p>
     <!-- EDIT ME -->
     Every strategy must have a defined edge, a fixed risk per trade,
-    and a maximum drawdown I'm willing to accept. The goal is transparency, consistency and measurable results. You won't get a flashy highlight reel of unrealistic trades here. There are no get rich quick schemes. Just repeatable statistical edge formed from rigorous development and testing processes.
+    and a maximum drawdown I'm willing to accept. The goal is transparency, consistency and measurable results. You won't get a flashy highlight reel of unrealistic trades here. There are no get rich quick schemes. Just repeatable statistical edge formed from rigorous development and testing processes. Every signal I offer is from a bot that I am using on my own account(s).
   </p>
 </section>

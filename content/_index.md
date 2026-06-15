@@ -22,8 +22,8 @@ use_toc = false
   <p class="hero__subtitle">
     <!-- EDIT ME -->
     Our flagship trading bot has averaged 2.89% per month over the last 7 years and runs hands-free on
-    your own account. With up to 10× leverage from our liquidity provider your
-    deposit goes further — and your losses stay capped at what you put in.
+    your own account. With 10× leverage from the liquidity provider your
+    deposit goes further — and your potential losses stay capped at what you put in.
   </p>
   <div class="hero__actions">
     <a class="cta-button" href="#book">Book an onboarding call</a>
@@ -65,7 +65,7 @@ use_toc = false
   <h2>Project your returns</h2>
   <p class="section-lead">See how 10× leverage turns our flagship bot's monthly return into ROI on your deposit. <!-- EDIT the numbers in static/js/calculator.js --></p>
   {{ calculator() }}
-  <p class="metacopier-link"><a href="https://metacopier.io" target="_blank" rel="noopener">Already have a trading account? Click here to go to our MetaCopier Signal Provider page →</a> <!-- EDIT ME: your MetaCopier page URL --></p>
+  <p class="metacopier-link"><a href="https://metacopier.io/marketplace/c26c253d-587b-45d9-9191-77cdef186a86" target="_blank" rel="noopener">Already have a trading account? Click here to go to our bot's MetaCopier Signal Provider page →</a> <!-- EDIT ME: your MetaCopier page URL --></p>
 </section>
 
 <hr>
@@ -76,29 +76,29 @@ use_toc = false
   <div class="pricing-grid">
     <div class="plan">
       <p class="plan__badge">Most popular</p>
-      <h3 class="plan__name">Profit share</h3>
+      <h3 class="plan__name">Performance fee</h3>
       <p class="plan__price">30%<span> of profits</span></p>
-      <ul class="plan__features"><li>No upfront cost</li><li>We only earn when you do</li><li>Flagship bot</li></ul>
+      <ul class="plan__features"><li>No upfront cost</li><li>We only earn when you do</li><li>Cancel anytime</li></ul>
       <a class="cta-button" href="#book">Get started</a>
     </div>
-    <div class="plan plan--featured">
+    <div class="plan">
       <h3 class="plan__name">Monthly</h3>
       <p class="plan__price">$49<span>/mo</span></p>
-      <ul class="plan__features"><li>Hands-off full copy</li><li>Cancel anytime</li><li>Flagship bot</li></ul>
+      <ul class="plan__features"><li>Billed Monthly via MetaCopier</li><li>Cancel anytime</li></ul>
       <a class="cta-button" href="#book">Subscribe</a>
     </div>
     <div class="plan">
       <h3 class="plan__name">Yearly</h3>
       <p class="plan__price">$289<span>/yr</span></p>
       <p class="plan__save">Save 50% vs monthly</p>
-      <ul class="plan__features"><li>Hands-off full copy</li><li>≈ $24/mo</li><li>Flagship bot</li></ul>
+      <ul class="plan__features"><li>Pay once and get signals for a full year</li><li>≈ $24/mo</li></ul>
       <a class="cta-button" href="#book">Choose yearly</a>
     </div>
   </div>
   <div class="pricing-lifetime">
     <h3 class="pricing-lifetime__title">Lifetime access</h3>
     <p class="pricing-lifetime__price">$499 <span>one-time</span></p>
-    <p class="pricing-lifetime__desc">Pay once, access the flagship bot for life. <!-- EDIT ME --></p>
+    <p class="pricing-lifetime__desc">Pay once, access the bot for life. <!-- EDIT ME --></p>
     <a class="cta-button" href="#contact">Ask about lifetime access</a>
   </div>
 </section>
@@ -113,8 +113,8 @@ use_toc = false
 <hr>
 
 <section id="verification">
-  <h2>Verified, not promised</h2>
-  <p class="section-lead">Every trade is tracked publicly. Check the live numbers yourself.</p>
+  <h2>Proof, not promise</h2>
+  <p class="section-lead">Every trade is tracked publicly. All signals we offer are being traded on our real accounts. You can always check the live stats on these accounts on our Myfxbook and Metacopier pages.</p>
   <div class="verify-grid verify-grid--single">
     <div class="verify-card">
       <h3>Myfxbook</h3>
@@ -124,7 +124,7 @@ use_toc = false
       <div class="verify-embed">
         <p class="verify-placeholder">Live Myfxbook widget goes here.</p>
       </div>
-      <a class="cta-button cta-button--ghost" href="https://www.myfxbook.com/members/AnActualBanana" target="_blank" rel="noopener">View Myfxbook account</a>
+      <a class="cta-button cta-button--ghost" href="https://www.myfxbook.com/members/AnActualBanana/grid-scalping-v2-eurusd/12067479" target="_blank" rel="noopener">View the Myfxbook page for the bot</a>
       <!-- EDIT ME: replace the link above with your real Myfxbook page. -->
     </div>
   </div>
@@ -165,7 +165,7 @@ use_toc = false
   <h2>Important disclaimer</h2>
   <p>
     <!-- EDIT ME: have a professional review this before going live. -->
-    Actual Investments provides automated trading, copy-trading and educational
+    Actual Investments provides trading signals and educational
     content for informational purposes only. Nothing on this site is financial,
     investment, legal, or tax advice, or a solicitation to buy or sell any
     financial instrument. Trading and investing involve substantial risk of loss,
@@ -174,6 +174,6 @@ use_toc = false
     guarantee of results. Your broker, the liquidity provider, MetaCopier,
     Calendly and Myfxbook are independent third-party services not owned or
     operated by Actual Investments. Past performance does not indicate future
-    results. You are solely responsible for your own decisions.
+    results. You are solely responsible for your own trading, investment, and financial decisions.
   </p>
 </section>
