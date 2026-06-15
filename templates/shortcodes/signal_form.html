@@ -1,0 +1,28 @@
+{# ---------------------------------------------------------------------------
+   "Host your signal" enquiry form, handled by Web3Forms.
+   Same access key as the other forms. Submitted in the background by
+   static/js/referral.js (it wires every form with class "js-form").
+--------------------------------------------------------------------------- #}
+<form id="signal-form" class="contact-form js-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="050fb450-e37d-43bc-97f5-322072bf6abc">
+    <input type="hidden" name="subject" value="New signal-hosting enquiry — Actual Investments">
+    <input type="hidden" name="from_name" value="Actual Investments website">
+
+    {# Honeypot spam trap #}
+    <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none;">
+
+    <label for="sf-name">Name</label>
+    <input id="sf-name" type="text" name="name" required autocomplete="name">
+
+    <label for="sf-email">Email</label>
+    <input id="sf-email" type="email" name="email" required autocomplete="email">
+
+    <label for="sf-platform">Where is your signal currently hosted or traded? <span class="optional">(optional)</span></label>
+    <input id="sf-platform" type="text" name="platform" placeholder="e.g. MT4/MT5, MetaCopier, Telegram">
+
+    <label for="sf-strategy">Tell us about your strategy</label>
+    <textarea id="sf-strategy" name="strategy" rows="5" placeholder="Markets traded, style, track record, average monthly return, max drawdown…"></textarea>
+
+    <button type="submit">Submit your signal</button>
+    <p class="form-status" role="status" aria-live="polite"></p>
+</form>

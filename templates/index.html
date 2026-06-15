@@ -3,7 +3,33 @@
 
 {% block extra_head %}
     <link rel="stylesheet" href="{{ get_url(path='custom.css') }}">
+    {# Optional background image + adjustable page transparency.
+       Set background_image and content_opacity in config.toml to enable. #}
+    {% if config.extra.background_image %}
+    <style>
+        body {
+            background-image: url('{{ config.extra.background_image | safe }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: var(--background);
+            opacity: {{ config.extra.content_opacity | default(value=0.85) }};
+            z-index: -1;
+        }
+    </style>
+    {% endif %}
 {% endblock %}
+
+{# Bigger logo with a clarifying subtitle ("Trading Signals"). #}
+{% block logo_content %}
+    <span class="logo__name">{{ config.extra.logo_text | default(value="Actual Investments") }}</span>
+    {% if config.extra.logo_subtitle %}<span class="logo__sub">{{ config.extra.logo_subtitle }}</span>{% endif %}
+{% endblock logo_content %}
 
 {# Render the landing-page content (content/_index.md) at the site root,
    instead of the theme's default list of blog/mod posts. #}

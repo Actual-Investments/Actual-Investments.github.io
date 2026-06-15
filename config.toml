@@ -42,11 +42,24 @@ accent_color = "green"
 # Page background. One of: blue, dark, green, orange, pink, red, light, auto.
 background_color = "dark"
 
-# Text shown in the top-left "logo" spot.
+# Text shown in the top-left "logo" spot. The company name is just
+# "Actual Investments"; the subtitle clarifies what the site offers.
 logo_text = "Actual Investments"
+logo_subtitle = "Trading Signals"
 
 # Name used in the copyright line at the bottom of the page.
 author = "Actual Investments"
+
+# ---------------------------------------------------------------------------
+#  Optional background image + page transparency  ( >>> CHANGE ME <<< )
+# ---------------------------------------------------------------------------
+# Drop an image in static/img/ and set the path here (e.g. "/img/background.jpg")
+# to turn on a full-page background. Leave it "" for the plain dark background.
+background_image = ""
+# How opaque the page is OVER the background image (0 = image fully visible,
+# 1 = image hidden). Lower = more of the image shows through. The disclaimer
+# stays fully opaque regardless.
+content_opacity = 0.88
 
 # Button styling. Combine any of: rounded, outline, underlined_link.
 button_style = 'rounded outline'
@@ -63,12 +76,12 @@ button_style = 'rounded outline'
 # Note: "$BASE_URL" is replaced with your site address automatically, so these
 # links work from any page (e.g. the About page jumps back to the home section).
 menu_items = [
-    {name = "How it works", url = "$BASE_URL/#activation"},
-    {name = "Projections",  url = "$BASE_URL/#calculator"},
-    {name = "Pricing",      url = "$BASE_URL/#pricing"},
-    {name = "Verification", url = "$BASE_URL/#verification"},
-    {name = "About",        url = "$BASE_URL/about"},
-    {name = "Book a call",  url = "$BASE_URL/#book"},
+    {name = "Ways to trade", url = "$BASE_URL/#ways"},
+    {name = "Projections",   url = "$BASE_URL/#calculator"},
+    {name = "Pricing",       url = "$BASE_URL/#pricing"},
+    {name = "Proof",         url = "$BASE_URL/#verification"},
+    {name = "About",         url = "$BASE_URL/about"},
+    {name = "Book a call",   url = "$BASE_URL/#book"},
 ]
 
 

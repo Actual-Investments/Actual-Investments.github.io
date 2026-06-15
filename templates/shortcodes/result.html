@@ -1,0 +1,11 @@
+{# ---------------------------------------------------------------------------
+   One testing-result image with an optional heading and description.
+   Usage in a page:
+     {{ result(src="/img/results/my-test.png", title="My title", desc="Notes") }}
+   title and desc are optional.
+--------------------------------------------------------------------------- #}
+<figure class="result-item">
+{% if title %}<h3>{{ title }}</h3>{% endif %}
+{% if desc %}<p>{{ desc }}</p>{% endif %}
+<img src="{{ src }}" alt="{{ title | default(value='Strategy tester result') }}" loading="lazy">
+</figure>

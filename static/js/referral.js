@@ -19,6 +19,9 @@
 
   var STORAGE_KEY = "ai_referral_code";
 
+  // True when the code came from THIS page's URL (?ref=…), so we lock the field.
+  var referralFromUrl = false;
+
   // --- 1. Work out the current referral code --------------------------------
   function getReferralCode() {
     var params = new URLSearchParams(window.location.search);
@@ -30,6 +33,7 @@
     code = code.trim();
 
     if (code) {
+      referralFromUrl = true;
       try { window.localStorage.setItem(STORAGE_KEY, code); } catch (e) {}
       return code;
     }
@@ -44,7 +48,15 @@
   function wireReferralField() {
     if (!referralCode) return;
     var field = document.getElementById("referral-field");
-    if (field && !field.value) field.value = referralCode;
+    if (!field) return;
+    field.value = referralCode;
+    // If the visitor arrived via a referral link, lock the code so it can't
+    // be changed or overwritten — the referral is credited to that partner.
+    if (referralFromUrl) {
+      field.readOnly = true;
+      field.classList.add("is-locked");
+      field.setAttribute("title", "Referral code applied from your link");
+    }
   }
 
   // --- 3. Submit every form with class "js-form" via fetch (no reload) -------

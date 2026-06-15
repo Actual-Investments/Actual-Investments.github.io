@@ -1,29 +1,31 @@
 {# ---------------------------------------------------------------------------
-   Leverage projection calculator (deposit -> leveraged amount -> ROI).
-   All the editable numbers live in static/js/calculator.js (CONFIG block).
+   Returns projection calculator (3 modes, risk tiers, warnings).
+   All editable numbers live in static/js/calculator.js (CONFIG block).
    Styling lives in sass/custom.scss (.calc).
 --------------------------------------------------------------------------- #}
 <div class="calc" id="calc">
   <div class="calc__panel">
-    <h3 class="calc__title">Interactive calculator</h3>
-    <p class="calc__label">Your deposit amount: <strong class="js-deposit">$10,000</strong></p>
-    <input type="range" id="calcSlider" min="10000" max="250000" step="1000" value="10000" aria-label="Deposit amount">
-    <div class="roi-chips" id="calcPresets"></div>
-    <ul class="calc__steps">
-      <li>You deposit <span class="js-deposit">$10,000</span> with a regulated broker — your capital stays in your name.</li>
-      <li>Our liquidity provider gives you <span class="js-exposure">$100,000</span> in trading power (<span class="js-leverage">×10</span> leverage).</li>
-      <li>The flagship bot averages <span class="js-return">2.89%</span> per month, for <span class="js-profit">$2,890</span> in profit.</li>
-      <li>Maximum loss is capped at your deposit — no margin calls, no surprise liabilities.</li>
-    </ul>
+    <h3 class="calc__title">Build your scenario</h3>
+    <div class="calc__field"><span class="calc__label">How will you trade?</span><div class="roi-chips" id="calcModes"></div></div>
+    <div class="calc__field" id="calcSizeWrap">
+      <span class="calc__label">Account size</span>
+      <div class="roi-chips" id="calcPresets"></div>
+      <input type="number" id="calcInput" class="calc__input" min="0" step="50" value="2500" aria-label="Account size in dollars">
+      <input type="range" id="calcSlider" min="0" max="1000" value="500" aria-label="Account size slider">
+      <span class="calc__hint">Type any amount, use the presets, or drag the slider (it scales up to $5M).</span>
+    </div>
+    <div class="calc__field" id="calcPropWrap" style="display:none">
+      <span class="calc__label">The 5ers account (size · challenge fee)</span>
+      <div class="roi-chips" id="calcPropTiers"></div>
+    </div>
+    <div class="calc__field"><span class="calc__label">Risk level</span><div class="roi-chips" id="calcRisk"></div></div>
   </div>
   <div class="calc__panel calc__panel--scenario">
     <h3 class="calc__title">Your projection</h3>
-    <div class="calc__row"><span>Your deposit</span><span class="calc__val js-deposit">$10,000</span></div>
-    <div class="calc__row"><span>Leveraged amount (<span class="js-leverage">×10</span>)</span><span class="calc__val calc__val--accent js-exposure">$100,000</span></div>
-    <div class="calc__row"><span>Monthly return on strategy</span><span class="calc__val calc__val--accent js-return">2.89%</span></div>
-    <div class="calc__row calc__row--divider"><span>Your monthly profit</span><span class="calc__val js-profit">$2,890</span></div>
-    <div class="calc__row"><span>Monthly ROI (after leverage)</span><span class="calc__val calc__val--big js-roi">28.9%</span></div>
-    <p class="calc__note">Leverage is provided by a third-party liquidity provider and is capped so your maximum loss is limited to your deposit. Figures are illustrative only, not a guarantee — past performance does not predict future results.</p>
+    <div id="calcResults"></div>
+    <p class="calc__note">Figures are based on historical strategy testing and are illustrative only — not a guarantee. Trading involves substantial risk of loss; past performance does not predict future results.</p>
   </div>
+  <div class="calc__warnings" id="calcWarnings"></div>
+  <p class="calc__propdisc" id="calcPropDisclaimer" style="display:none"><strong>Prop firm reminder:</strong> prop firm rules vary and change often. Always thoroughly research your prop firm's rules, terms and conditions before trading, and make sure you remain compliant. It is your responsibility to ensure those rules are followed — a single breach can fail an evaluation or close a funded account.</p>
 </div>
 <script src="{{ get_url(path='js/calculator.js') }}" defer></script>

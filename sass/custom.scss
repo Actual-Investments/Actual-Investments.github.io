@@ -732,6 +732,175 @@ details {
   display: block;
 }
 
+// --- Calculator: fields, inputs, warnings ------------------------------------
+.calc__field {
+  margin-bottom: 1.25rem;
+}
+
+.calc__label {
+  display: block;
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+}
+
+.calc__input {
+  width: 100%;
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.4rem;
+  color: var(--color);
+  padding: 0.55rem 0.7rem;
+  font: inherit;
+  margin: 0.5rem 0;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+}
+
+.calc__hint {
+  display: block;
+  font-size: 0.78rem;
+  opacity: 0.6;
+}
+
+.calc__warnings,
+.calc__propdisc {
+  grid-column: 1 / -1;
+}
+
+.calc__warnings:empty {
+  display: none;
+}
+
+.calc-warn {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.calc-warn__icon {
+  flex: 0 0 auto;
+}
+
+.calc-warn--mild {
+  background: rgba(255, 196, 0, 0.14);
+  border: 1px solid rgba(255, 196, 0, 0.55);
+}
+
+.calc-warn--severe {
+  background: rgba(255, 70, 70, 0.16);
+  border: 1px solid rgba(255, 70, 70, 0.6);
+}
+
+.calc__propdisc {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  opacity: 0.85;
+  border-left: 3px solid var(--accent);
+  padding-left: 0.8rem;
+}
+
+// Emphasised monthly-return / profit figures
+.return-figure {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+// --- Bigger logo with a clarifying subtitle ----------------------------------
+.logo {
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.05;
+  padding: 7px 13px;
+}
+
+.logo__name {
+  font-size: 1.45rem;
+  font-weight: bold;
+}
+
+.logo__sub {
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+// Disclaimer stays fully opaque, even over a background image.
+.disclaimer {
+  position: relative;
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+// Small links above the disclaimer
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+
+  a {
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.results-link {
+  margin-top: 1rem;
+  text-align: center;
+
+  a {
+    font-weight: bold;
+  }
+}
+
+// A referral field that was locked in from a ?ref= link.
+.contact-form input.is-locked {
+  opacity: 0.7;
+  cursor: not-allowed;
+  border-style: dashed;
+}
+
+// --- Testing results page ----------------------------------------------------
+.result-item {
+  margin: 2rem 0;
+
+  h3 {
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+  }
+
+  p {
+    opacity: 0.9;
+    margin-top: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    display: block;
+    margin-top: 0.6rem;
+  }
+}
+
 // --- Small screens -----------------------------------------------------------
 @media (max-width: $phone-max-width) {
   .hero__actions {
