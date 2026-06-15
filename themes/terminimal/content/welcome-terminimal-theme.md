@@ -73,7 +73,7 @@ The second part follows here.
 `figure` shortcode:
 
 ```
-figure(src="http://rustacean.net/assets/rustacean-flat-gesture.png",
+figure(src="https://rustacean.net/assets/rustacean-flat-gesture.png",
        style="width: 25%;",
        position="center",
        caption_position="left",
@@ -81,7 +81,7 @@ figure(src="http://rustacean.net/assets/rustacean-flat-gesture.png",
        caption_style="font-weight: bold; font-style: italic;")
 ```
 
-{{ figure(src="http://rustacean.net/assets/rustacean-flat-gesture.png",
+{{ figure(src="https://rustacean.net/assets/rustacean-flat-gesture.png",
           style="width: 25%;",
           position="center",
           caption_position="left",

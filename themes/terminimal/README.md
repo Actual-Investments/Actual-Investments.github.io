@@ -95,7 +95,7 @@ Same as `image`, but with a few extra optional arguments:
 Example:
 
 ```
-{{ figure(src="http://rustacean.net/assets/rustacean-flat-gesture.png",
+{{ figure(src="https://rustacean.net/assets/rustacean-flat-gesture.png",
           style="width: 25%;",
           position="right",
           caption_position="left",
