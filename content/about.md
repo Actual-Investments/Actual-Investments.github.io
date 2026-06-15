@@ -19,7 +19,7 @@ use_toc = false
     <h1>About Actual Investments</h1>
     <p class="section-lead">
       <!-- EDIT ME: one-line positioning statement. -->
-      Systematic, risk-first trading — built on a repeatable process, not hype.
+      Systematic, alpha-first trading — built on a repeatable process, not hype.
     </p>
     <!-- EDIT ME: replace with your real LinkedIn profile URL. -->
     <a class="linkedin-btn" href="https://www.linkedin.com/in/logan-mcclain" target="_blank" rel="noopener">
@@ -30,24 +30,21 @@ use_toc = false
 </div>
 
 <section class="about-intro">
-  <h2>Who we are</h2>
+  <h2>Who I am</h2>
   <p>
     <!-- EDIT ME: your story. Replace all of this with your real background. -->
-    I'm Logan,  trader behind Actual Investments. I've spent [X] years
-    trading [markets — e.g. forex and futures] and building automated strategies
-    ("bots") that follow strict, rules-based logic. After years of refining these
-    systems on my own capital, I created Actual Investments to give others access
-    to the same automated strategy and leveraged copy-trading approach I use myself.
+    I've spent 8 years trading just about every asset class, timeframe, and style you can think of. I've given thousands of dollars and thousands of hours of my time to this pursuit. It has taken me to many unexpected places, learning skills across multiple disciplines, and meeting all kinds of interesting people along the way. After years of compounding iteration, trial and error, pain and persistence, I've finally arrived at consistent profitability with algorithmic trading systems.
+    Several months after deploying these systems using my own capital, I created Actual Investments to give others the oppurtunity to access
+    the results of this hard work.
   </p>
 </section>
 
 <section class="about-experience">
   <h2>Experience &amp; track record</h2>
   <ul class="checklist">
-    <li><!-- EDIT ME -->8+ years actively trading [markets].</li>
-    <li>Developed and forward-tested [N] automated strategies.</li>
+    <li><!-- EDIT ME -->8+ years in trading and 4+ years in software engineering.</li>
+    <li>Developed and forward-tested dozens of strategies.</li>
     <li>Verified performance published on Myfxbook and MetaCopier (see the <a href="/#verification">verification section</a>).</li>
-    <li>[Any relevant certifications, prior roles, or notable results.]</li>
   </ul>
 </section>
 
@@ -55,10 +52,7 @@ use_toc = false
   <h2>How I think about trading</h2>
   <p>
     <!-- EDIT ME -->
-    Risk comes first. Every strategy has a defined edge, a fixed risk per trade,
-    and a maximum drawdown I'm willing to accept. The goal isn't to win every
-    trade — it's to stay in the game long enough for a positive expectancy to
-    compound. I'd rather show you verified, warts-and-all numbers than a
-    cherry-picked highlight reel.
+    Every strategy must have a defined edge, a fixed risk per trade,
+    and a maximum drawdown I'm willing to accept. The goal is transparency, consistency and measurable results. You won't get a flashy highlight reel of unrealistic trades here. There are no get rich quick schemes. Just repeatable statistical edge formed from rigorous development and testing processes.
   </p>
 </section>

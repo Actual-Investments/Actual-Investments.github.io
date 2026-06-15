@@ -144,19 +144,19 @@ use_toc = false
   <h2>Prefer we reach out?</h2>
   <p class="section-lead">Leave your details and we'll get back to you to schedule a call.</p>
   {{ contact_form() }}
-  <p class="section-lead">Prefer email? Write to <a href="mailto:you@actual-investments.com">you@actual-investments.com</a>. <!-- EDIT ME: your real email --></p>
+  <p class="section-lead">Prefer email? Write to <a href="mailto:loganmcclain59@gmail.com">loganmcclain59@gmail.com</a>. <!-- EDIT ME: your real email --></p>
 </section>
 
 <hr>
 
 <section id="faq">
   <h2>Frequently asked questions</h2>
-  <details><summary>What exactly is the "flagship bot"?</summary><p>It's our automated, rules-based trading strategy. It trades a defined set of markets with fixed risk, fully automatically.</p></details>
-  <details><summary>Do you ever touch my money?</summary><p>No. Your funds stay in your own regulated broker account. The copier only mirrors trades — we can never deposit or withdraw.</p></details>
-  <details><summary>Where does the leverage come from?</summary><p>From a third-party liquidity provider that offers up to 10× leverage, with your maximum loss capped at your deposit.</p></details>
-  <details><summary>Do you guarantee profits?</summary><p>No. Trading carries real risk and no one can guarantee returns. The calculator shows illustrative projections, not promises.</p></details>
+  <details><summary>What exactly is the trading bot?</summary><p>It's our automated trading strategy based on hundreds of hours of development and testing. It trades EURUSD with fixed risk, fully automatically.</p></details>
+  <details><summary>Do you ever touch my money?</summary><p>No. Your funds stay in your own trading account. The copier only mirrors trades — we can never deposit or withdraw.</p></details>
+  <details><summary>Where does the leverage come from?</summary><p>From a third-party liquidity provider that offers 10-16x leverage based on your deposit, with your maximum loss capped at your deposit amount.</p></details>
+  <details><summary>Do you guarantee profits?</summary><p>No. Trading carries real risk and no one can guarantee returns. The calculator shows hypthetical projections, not promises. See the disclaimer for more information.</p></details>
   <details><summary>How is the bot delivered?</summary><p>Trades are copied straight to your account with MetaCopier. Standalone Telegram signals are coming soon.</p></details>
-  <details><summary>Can I cancel?</summary><p>Monthly plans are month-to-month and can be cancelled anytime. Yearly and lifetime terms are described at checkout. <!-- EDIT ME if different --></p></details>
+  <details><summary>Can I cancel?</summary><p>Monthly and profit-share plans are month-to-month and can be cancelled anytime.  <!-- EDIT ME if different --></p></details>
 </section>
 
 <hr>
