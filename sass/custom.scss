@@ -424,26 +424,93 @@ details {
   margin: 0;
 }
 
-// --- ROI / drawdown calculator ----------------------------------------------
-.roi-calc {
-  border: 1px solid var(--border-color);
-  border-radius: 0.9rem;
-  padding: 1.5rem;
-  background: var(--accent-alpha-20);
-}
-
-.roi-calc__controls {
+// --- Activation steps --------------------------------------------------------
+.steps-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1.25rem;
-  margin-bottom: 1.5rem;
 }
 
-.roi-calc__label {
-  display: block;
-  font-weight: bold;
+.step-card {
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  background: var(--accent-alpha-20);
+
+  p {
+    opacity: 0.9;
+  }
+}
+
+.step-card__head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   margin-bottom: 0.5rem;
+
+  h3 {
+    margin: 0;
+    font-size: 1.15rem;
+  }
 }
 
+.step-card__num {
+  flex: 0 0 auto;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--background);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+
+  li {
+    padding: 0.3rem 0 0.3rem 1.4rem;
+    position: relative;
+    font-size: 0.9rem;
+
+    &::before {
+      content: "→";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+
+.callout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.callout {
+  border: 1px solid var(--accent-alpha-70);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+
+  h3 {
+    margin: 0 0 0.5rem;
+    color: var(--accent);
+    font-size: 1.1rem;
+  }
+
+  p {
+    margin: 0;
+    opacity: 0.9;
+  }
+}
+
+// --- Projection calculator ---------------------------------------------------
 .roi-chips {
   display: flex;
   flex-wrap: wrap;
@@ -472,55 +539,119 @@ details {
   }
 }
 
-.roi-calc input[type="range"] {
+.calc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.calc__panel {
+  border: 1px solid var(--border-color);
+  border-radius: 0.9rem;
+  padding: 1.5rem;
+  background: var(--accent-alpha-20);
+
+  &--scenario {
+    background: var(--background);
+    border-color: var(--accent);
+  }
+}
+
+.calc__title {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.calc__label {
+  margin: 0 0 0.75rem;
+}
+
+.calc input[type="range"] {
   width: 100%;
   accent-color: var(--accent);
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
-.roi-calc__results {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 0.75rem;
+.calc__steps {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+
+  li {
+    padding: 0.4rem 0 0.4rem 1.5rem;
+    position: relative;
+    opacity: 0.9;
+    font-size: 0.92rem;
+
+    &::before {
+      content: "✓";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+  }
 }
 
-.roi-stat {
-  border: 1px solid var(--border-color);
-  border-radius: 0.6rem;
-  padding: 0.85rem 1rem;
-  background: var(--background);
+.calc__row {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.55rem 0;
+
+  &--divider {
+    border-top: 1px solid var(--border-color);
+    margin-top: 0.3rem;
+    padding-top: 0.9rem;
+  }
 }
 
-.roi-stat__label {
-  font-size: 0.8rem;
-  opacity: 0.75;
-}
-
-.roi-stat__value {
-  font-size: 1.5rem;
+.calc__val {
   font-weight: bold;
-}
+  font-size: 1.1rem;
+  white-space: nowrap;
 
-.roi-stat--accent {
-  border-color: var(--accent);
+  &--accent {
+    color: var(--accent);
+  }
 
-  .roi-stat__value {
+  &--big {
+    font-size: 1.8rem;
     color: var(--accent);
   }
 }
 
-.roi-stat--warn .roi-stat__value {
-  color: #ffb454;
-}
-
-.roi-calc__note {
+.calc__note {
   margin: 1.25rem 0 0;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   opacity: 0.7;
   line-height: 1.5;
+}
+
+.metacopier-link {
+  margin-top: 1.25rem;
+  text-align: center;
+
+  a {
+    font-weight: bold;
+  }
+}
+
+// --- Telegram coming soon ----------------------------------------------------
+.telegram-soon {
+  text-align: center;
+  border: 1px dashed var(--accent-alpha-70);
+  border-radius: 0.9rem;
+  padding: 2rem 1.5rem;
+  background: var(--accent-alpha-20);
+}
+
+// --- Single verification card ------------------------------------------------
+.verify-grid--single {
+  grid-template-columns: minmax(0, 38rem);
+  justify-content: center;
 }
 
 // --- About page --------------------------------------------------------------
@@ -556,6 +687,51 @@ details {
   margin-left: 0.5rem;
 }
 
+.about-head {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  .section-lead {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.about-head__text {
+  flex: 1 1 18rem;
+}
+
+.headshot {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--accent);
+  color: var(--background);
+  padding: 0.45em 1em;
+  border-radius: 2em;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.9;
+  }
+}
+
+.linkedin-btn__icon {
+  display: block;
+}
+
 // --- Small screens -----------------------------------------------------------
 @media (max-width: $phone-max-width) {
   .hero__actions {
@@ -563,7 +739,12 @@ details {
     align-items: center;
   }
 
-  .roi-stat__value {
-    font-size: 1.3rem;
+  .calc {
+    grid-template-columns: 1fr;
+  }
+
+  .about-head {
+    text-align: center;
+    justify-content: center;
   }
 }
