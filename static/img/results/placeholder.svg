@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400" role="img" aria-label="Result image placeholder">
-  <rect width="800" height="400" fill="#2a2f3a"/>
-  <rect x="1" y="1" width="798" height="398" fill="none" stroke="#78e2a0" stroke-dasharray="8 8"/>
-  <text x="400" y="190" fill="#78e2a0" font-family="monospace" font-size="28" text-anchor="middle">Result image placeholder</text>
-  <text x="400" y="230" fill="#9fb0a8" font-family="monospace" font-size="16" text-anchor="middle">Drop your PNG in static/img/results/ and update the src</text>
-</svg>
