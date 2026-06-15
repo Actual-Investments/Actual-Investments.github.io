@@ -45,7 +45,7 @@ use_toc = false
     <div class="step-card">
       <div class="step-card__head"><span class="step-card__num">2</span><h3>Fund your account</h3></div>
       <p>Deposit with a recommended broker or prop trading firm. You maintain full custody of your account.</p>
-      <ul class="step-card__list"><li>Minimum $2500 deposit <!-- EDIT ME --></li><li>Full custody control</li><li>Multiple payment methods</li></ul>
+      <ul class="step-card__list"><li>Minimum $250 deposit <!-- EDIT ME --></li><li>Full custody control</li><li>Multiple payment methods</li></ul>
     </div>
     <div class="step-card">
       <div class="step-card__head"><span class="step-card__num">3</span><h3>Connect to our bot</h3></div>
@@ -75,13 +75,13 @@ use_toc = false
   <p class="section-lead">One flagship bot, simple and transparent ways to pay. <!-- EDIT ME --></p>
   <div class="pricing-grid">
     <div class="plan">
+      <p class="plan__badge">Most popular</p>
       <h3 class="plan__name">Profit share</h3>
       <p class="plan__price">30%<span> of profits</span></p>
       <ul class="plan__features"><li>No upfront cost</li><li>We only earn when you do</li><li>Flagship bot</li></ul>
       <a class="cta-button" href="#book">Get started</a>
     </div>
     <div class="plan plan--featured">
-      <p class="plan__badge">Most popular</p>
       <h3 class="plan__name">Monthly</h3>
       <p class="plan__price">$49<span>/mo</span></p>
       <ul class="plan__features"><li>Hands-off full copy</li><li>Cancel anytime</li><li>Flagship bot</li></ul>

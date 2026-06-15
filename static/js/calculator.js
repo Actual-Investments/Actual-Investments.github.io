@@ -18,7 +18,7 @@ var CONFIG = {
   deposits: [250, 400, 700, 1600, 3000, 5000, 8500, 15000, 30000],
 
   // Which preset is selected when the page loads (index into the list above).
-  defaultDeposit: 0
+  defaultDeposit: 3
 };
 /* ▲▲▲  END OF EDITABLE SECTION — logic below  ▲▲▲ */
 
