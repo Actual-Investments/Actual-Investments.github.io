@@ -807,6 +807,37 @@ details {
   padding-left: 0.8rem;
 }
 
+.calc__more {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent-alpha-70);
+  border-radius: 2em;
+  padding: 0.4em 1.1em;
+  font: inherit;
+  cursor: pointer;
+  margin-top: 1rem;
+
+  &:hover {
+    border-color: var(--accent);
+  }
+}
+
+.calc__details {
+  margin-top: 1rem;
+  max-height: 360px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.calc__subhead {
+  margin: 1rem 0 0.25rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+}
+
 // Emphasised monthly-return / profit figures
 .return-figure {
   color: var(--accent);

@@ -147,7 +147,7 @@ use_toc = false
       <a class="cta-button cta-button--ghost" href="https://www.myfxbook.com/members/AnActualBanana/grid-scalping-v2-eurusd/12067479" target="_blank" rel="noopener">View the Myfxbook page for the bot</a>
     </div>
   </div>
-  <p class="results-link"><a href="/results/">See the full strategy-tester results →</a></p>
+  <p class="results-link"><a href="/proof/">See full proof &amp; strategy-tester results →</a></p>
 </section>
 
 <hr>
@@ -164,7 +164,7 @@ use_toc = false
   <h2>Prefer we reach out?</h2>
   <p class="section-lead">Leave your details and we'll get back to you to schedule a call.</p>
   {{ contact_form() }}
-  <p class="section-lead">Prefer email? Write to <a href="mailto:loganmcclain59@gmail.com">loganmcclain59@gmail.com</a>.</p>
+  <p class="section-lead">Prefer email? Write to <a href="mailto:logan.mcclain@actual-investments.com">logan.mcclain@actual-investments.com</a>.</p>
 </section>
 
 <hr>

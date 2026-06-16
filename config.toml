@@ -79,7 +79,8 @@ menu_items = [
     {name = "Ways to trade", url = "$BASE_URL/#ways"},
     {name = "Projections",   url = "$BASE_URL/#calculator"},
     {name = "Pricing",       url = "$BASE_URL/#pricing"},
-    {name = "Proof",         url = "$BASE_URL/#verification"},
+    {name = "Proof",         url = "$BASE_URL/proof"},
+    {name = "Affiliate",     url = "$BASE_URL/affiliates"},
     {name = "About",         url = "$BASE_URL/about"},
     {name = "Book a call",   url = "$BASE_URL/#book"},
 ]
