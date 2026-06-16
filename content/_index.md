@@ -45,7 +45,7 @@ use_toc = false
     </div>
     <div class="card">
       <h3>Prop firm account</h3>
-      <p>Trade funded capital instead of your own. We'll refer you to <a href="https://the5ers.com/high-stakes/" target="_blank" rel="noopener">The 5ers</a> two-step High Stakes evaluation; pass it and trade their capital, keeping a profit split. Note their strict rules — 5% daily and 10% overall max loss, and no trading within 2 minutes of high-impact news — so conservative settings suit this best.</p>
+      <p>Trade funded capital instead of your own. We'll refer you to <a href="https://the5ers.com/high-stakes/" target="_blank" rel="noopener">The 5ers</a> two-step High Stakes evaluation starting at $29; pass it and trade their capital, keeping a profit split. Note their strict rules — 5% daily and 10% overall max loss, and no trading within 2 minutes of high-impact news — so conservative settings suit this best.</p>
       <p class="card__how"><strong>Best for:</strong> growing larger size without risking much of your own capital.</p>
     </div>
     <div class="card">
@@ -172,7 +172,7 @@ use_toc = false
 <section id="faq">
   <h2>Frequently asked questions</h2>
   <details><summary>What exactly is the trading bot?</summary><p>It's our automated trading strategy, built and refined over hundreds of hours of development and testing. It trades EURUSD with fixed risk, fully automatically.</p></details>
-  <details><summary>What account do I need?</summary><p>Three options: connect your own existing account, get funded through a prop firm (we refer you to The 5ers' evaluation), or open a live brokerage account from $300. See "Three ways to trade" above.</p></details>
+  <details><summary>What account do I need?</summary><p>Three options: connect your own existing account, get funded through a prop firm (we refer you to The 5ers' evaluation, cheapest accounts available at $29), or open a live brokerage account from $300. See "Three ways to trade" above.</p></details>
   <details><summary>Do you ever touch my money?</summary><p>No. Your funds stay in your own trading account. The copier only mirrors trades — we can never deposit, withdraw, or take custody.</p></details>
   <details><summary>What is the prop-firm option?</summary><p>You take a funded-account evaluation with The 5ers and trade their capital for a profit split. Their rules are strict (5% daily and 10% overall max loss, and no trading around high-impact news), so it suits the lower-risk settings — always read their terms in full.</p></details>
   <details><summary>Do you guarantee profits?</summary><p>No. Trading carries real risk and no one can guarantee returns. The calculator shows hypothetical projections, not promises. See the disclaimer below.</p></details>

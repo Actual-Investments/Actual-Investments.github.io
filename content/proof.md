@@ -26,7 +26,7 @@ use_toc = false
 
 <h2 style="margin-top:2.5rem">Strategy-tester results</h2>
 
-<p class="section-lead">Backtest and forward-test results. These are historical and hypothetical where noted, and do not guarantee future performance — see the disclaimer on the home page.</p>
+<p class="section-lead">Backtest results. These are historical and hypothetical where noted, and do not guarantee future performance — see the disclaimer on the home page.</p>
 
 <!-- =======================================================================
      HOW TO ADD A RESULT IMAGE
@@ -35,6 +35,4 @@ use_toc = false
         title and desc are optional (delete them if you don't want them).
      ======================================================================= -->
 
-{{ result(src="/img/results/placeholder.svg", title="EURUSD — 7-year backtest", desc="Replace this placeholder: drop your PNG in static/img/results/ and update the src, title and description.") }}
-
-{{ result(src="/img/results/placeholder.svg", title="Live / forward results", desc="A second example. Add as many result() blocks as you like.") }}
+{{ result(src="/img/results/Grid 2 EURUSD.jpg", title="EURUSD — 7-year backtest", desc="Testing period Oct 01 2017 - May 31 2026. $25,000 Starting Balance, Moderate Risk Level (0.10) starting lot") }}
