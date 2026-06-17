@@ -75,6 +75,8 @@ button_style = 'rounded outline'
 # ---------------------------------------------------------------------------
 # Note: "$BASE_URL" is replaced with your site address automatically, so these
 # links work from any page (e.g. the About page jumps back to the home section).
+# "newtab = true" opens the link in a new browser tab (used for the Discord
+# invite). >>> CHANGE the Discord url below to your real invite link. <<<
 menu_items = [
     {name = "Ways to trade", url = "$BASE_URL/#ways"},
     {name = "Projections",   url = "$BASE_URL/#calculator"},
@@ -82,6 +84,7 @@ menu_items = [
     {name = "Proof",         url = "$BASE_URL/proof"},
     {name = "Affiliate",     url = "$BASE_URL/affiliates"},
     {name = "About",         url = "$BASE_URL/about"},
+    {name = "Discord",       url = "https://discord.gg/S5TYhGnd", newtab = true},
     {name = "Book a call",   url = "$BASE_URL/#book"},
 ]
 
@@ -100,3 +103,29 @@ calendly_url = "https://calendly.com/loganmcclain59/30min"
 # emails you an access key. Paste that key here.
 # (The email you register with Web3Forms is where form submissions are sent.)
 web3forms_key = "YOUR-WEB3FORMS-ACCESS-KEY"
+
+
+# ===========================================================================
+#  Pricing & launch sale   ( >>> CHANGE ME <<< )
+#  (These two tables must stay at the very bottom of the file.)
+# ===========================================================================
+[extra.sale]
+# ONE switch for the whole launch sale. Set to false when the sale ends and
+# every plan automatically reverts to its full price (strike-throughs and
+# "% off" badges disappear).
+enabled = true
+# How many lifetime licenses are left (shown on the lifetime card).
+lifetime_left = 10
+
+[extra.pricing]
+# For each plan: "full" = regular price, "sale" = launch price.
+# The "% off" badges are calculated automatically from these two numbers.
+# profit_share is a % fee; the rest are dollars.
+profit_share_full = 50
+profit_share_sale = 25
+monthly_full = 99
+monthly_sale = 49
+yearly_full = 999
+yearly_sale = 449
+lifetime_full = 3999
+lifetime_sale = 1499

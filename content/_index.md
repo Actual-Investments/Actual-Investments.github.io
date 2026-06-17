@@ -80,7 +80,7 @@ use_toc = false
   </div>
   <div class="callout-grid">
     <div class="callout"><h3>⚡ Fast activation</h3><p>Most traders are approved and connected within 24 hours. Our streamlined process gets you to live automated trading quickly while keeping verification thorough.</p></div>
-    <div class="callout"><h3>🛡️ Your capital, your control</h3><p>Your funds stay in your own broker or prop-firm account. We can only send trade signals to the copier — we can never hold, custody, or access your account.</p></div>
+    <div class="callout"><h3>🛡️ Your capital, your control</h3><p>Your funds stay in your own broker or prop-firm account. We can only send trade signals to the copier — we can never hold, take custody of, or access your account.</p></div>
   </div>
 </section>
 
@@ -98,34 +98,7 @@ use_toc = false
 <section id="pricing">
   <h2>Pricing</h2>
   <p class="section-lead">One flagship bot, simple and transparent ways to pay. <!-- EDIT ME --></p>
-  <div class="pricing-grid">
-    <div class="plan">
-      <p class="plan__badge">Most popular</p>
-      <h3 class="plan__name">Performance fee</h3>
-      <p class="plan__price">30%<span> of profits</span></p>
-      <ul class="plan__features"><li>No upfront cost</li><li>We only earn when you do</li><li>Cancel anytime</li></ul>
-      <a class="cta-button" href="#book">Get started</a>
-    </div>
-    <div class="plan">
-      <h3 class="plan__name">Monthly</h3>
-      <p class="plan__price">$49<span>/mo</span></p>
-      <ul class="plan__features"><li>Billed Monthly via MetaCopier</li><li>Cancel anytime</li></ul>
-      <a class="cta-button" href="#book">Subscribe</a>
-    </div>
-    <div class="plan">
-      <h3 class="plan__name">Yearly</h3>
-      <p class="plan__price">$289<span>/yr</span></p>
-      <p class="plan__save">Save 50% vs monthly</p>
-      <ul class="plan__features"><li>Pay once and get signals for a full year</li><li>≈ $24/mo</li></ul>
-      <a class="cta-button" href="#book">Choose yearly</a>
-    </div>
-  </div>
-  <div class="pricing-lifetime">
-    <h3 class="pricing-lifetime__title">Lifetime access</h3>
-    <p class="pricing-lifetime__price">$499 <span>one-time</span></p>
-    <p class="pricing-lifetime__desc">Pay once, access the bot for life. <!-- EDIT ME --></p>
-    <a class="cta-button" href="#contact">Ask about lifetime access</a>
-  </div>
+  {{ pricing() }}
 </section>
 
 <hr>
@@ -133,6 +106,7 @@ use_toc = false
 <section id="telegram" class="telegram-soon">
   <h2>Telegram signals — coming soon</h2>
   <p class="section-lead">Standalone Telegram signal subscriptions are on the way. Want early access? <a href="#contact">Let us know</a> and we'll tell you the moment they launch.</p>
+  <p class="other-bots-link"><a href="/other-bots/">Looking for a different strategy? →</a></p>
 </section>
 
 <hr>

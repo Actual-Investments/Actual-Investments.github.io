@@ -354,6 +354,58 @@ details {
   margin: -0.5rem 0 0.75rem;
 }
 
+// --- Launch sale ----------------------------------------------------------
+.sale-banner {
+  text-align: center;
+  font-weight: bold;
+  color: var(--accent);
+  background: var(--accent-alpha-20);
+  border: 1px solid var(--accent-alpha-70);
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  margin: 0 auto 1.5rem;
+  max-width: 30rem;
+}
+
+.plan__was {
+  margin: -0.5rem 0 0.75rem;
+  font-size: 0.85rem;
+}
+
+.plan__strike {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.plan__off {
+  display: inline-block;
+  color: var(--background);
+  background: var(--accent);
+  font-weight: bold;
+  border-radius: 1em;
+  padding: 0.1em 0.6em;
+  margin-left: 0.3rem;
+  white-space: nowrap;
+}
+
+.pricing-lifetime__tag {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--background);
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 1em;
+  padding: 0.2em 0.9em;
+  margin: 0 0 0.75rem;
+}
+
+.pricing-lifetime--sale {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
 .pricing-lifetime {
   margin-top: 2.5rem;
   border: 2px solid var(--accent);
@@ -646,6 +698,11 @@ details {
   border-radius: 0.9rem;
   padding: 2rem 1.5rem;
   background: var(--accent-alpha-20);
+}
+
+.other-bots-link {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
 }
 
 // --- Single verification card ------------------------------------------------
