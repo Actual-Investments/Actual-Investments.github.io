@@ -2,6 +2,7 @@
    Pricing cards with an optional launch sale.
    Edit the values + the on/off switch in config.toml ([extra.sale] and
    [extra.pricing]). The "% off" badges are calculated automatically.
+   During a sale each card gets a border + a badge showing the full price.
 --------------------------------------------------------------------------- #}
 {% set s = config.extra.sale %}
 {% set p = config.extra.pricing %}
@@ -10,56 +11,33 @@
 <p class="sale-banner">🚀 Launch special — limited-time pricing</p>
 {% endif %}
 <div class="pricing-grid">
-<div class="plan">
-<p class="plan__badge">Most popular</p>
+<div class="plan{% if on %} plan--featured{% endif %}">
+{% if on %}<p class="plan__badge plan__badge--sale">{{ ((p.profit_share_full - p.profit_share_sale) * 100.0 / p.profit_share_full) | round }}% Off, will be {{ p.profit_share_full }}%</p>{% endif %}
 <h3 class="plan__name">Performance fee</h3>
-{% if on %}
-<p class="plan__price">{{ p.profit_share_sale }}%<span> of profits</span></p>
-<p class="plan__was"><span class="plan__strike">was {{ p.profit_share_full }}%</span> <span class="plan__off">{{ ((p.profit_share_full - p.profit_share_sale) * 100.0 / p.profit_share_full) | round }}% off</span></p>
-{% else %}
-<p class="plan__price">{{ p.profit_share_full }}%<span> of profits</span></p>
-{% endif %}
+<p class="plan__price">{% if on %}{{ p.profit_share_sale }}{% else %}{{ p.profit_share_full }}{% endif %}%<span> of profits</span></p>
 <ul class="plan__features"><li>No upfront cost</li><li>We only earn when you do</li><li>Cancel anytime</li></ul>
 <a class="cta-button" href="#book">Get started</a>
 </div>
-<div class="plan">
+<div class="plan{% if on %} plan--featured{% endif %}">
+{% if on %}<p class="plan__badge plan__badge--sale">{{ ((p.monthly_full - p.monthly_sale) * 100.0 / p.monthly_full) | round }}% Off, will be ${{ p.monthly_full }}/mo</p>{% endif %}
 <h3 class="plan__name">Monthly</h3>
-{% if on %}
-<p class="plan__price">${{ p.monthly_sale }}<span>/mo</span></p>
-<p class="plan__was"><span class="plan__strike">was ${{ p.monthly_full }}/mo</span> <span class="plan__off">{{ ((p.monthly_full - p.monthly_sale) * 100.0 / p.monthly_full) | round }}% off</span></p>
-{% else %}
-<p class="plan__price">${{ p.monthly_full }}<span>/mo</span></p>
-{% endif %}
+<p class="plan__price">${% if on %}{{ p.monthly_sale }}{% else %}{{ p.monthly_full }}{% endif %}<span>/mo</span></p>
 <ul class="plan__features"><li>Billed monthly via MetaCopier</li><li>Cancel anytime</li></ul>
 <a class="cta-button" href="#book">Subscribe</a>
 </div>
-<div class="plan">
+<div class="plan{% if on %} plan--featured{% endif %}">
+{% if on %}<p class="plan__badge plan__badge--sale">{{ ((p.yearly_full - p.yearly_sale) * 100.0 / p.yearly_full) | round }}% Off, will be ${{ p.yearly_full }}/yr</p>{% endif %}
 <h3 class="plan__name">Yearly</h3>
-{% if on %}
-<p class="plan__price">${{ p.yearly_sale }}<span>/yr</span></p>
-<p class="plan__was"><span class="plan__strike">was ${{ p.yearly_full }}/yr</span> <span class="plan__off">{{ ((p.yearly_full - p.yearly_sale) * 100.0 / p.yearly_full) | round }}% off</span></p>
-<ul class="plan__features"><li>Pay once for a full year</li><li>≈ ${{ (p.yearly_sale * 1.0 / 12) | round }}/mo</li></ul>
-{% else %}
-<p class="plan__price">${{ p.yearly_full }}<span>/yr</span></p>
-<ul class="plan__features"><li>Pay once for a full year</li><li>≈ ${{ (p.yearly_full * 1.0 / 12) | round }}/mo</li></ul>
-{% endif %}
+<p class="plan__price">${% if on %}{{ p.yearly_sale }}{% else %}{{ p.yearly_full }}{% endif %}<span>/yr</span></p>
+<ul class="plan__features"><li>Pay once for a full year</li>{% if on %}<li>≈ ${{ (p.yearly_sale * 1.0 / 12) | round }}/mo</li>{% else %}<li>≈ ${{ (p.yearly_full * 1.0 / 12) | round }}/mo</li>{% endif %}</ul>
 <a class="cta-button" href="#book">Choose yearly</a>
 </div>
 </div>
-{% if on %}
-<div class="pricing-lifetime pricing-lifetime--sale">
-<p class="pricing-lifetime__tag">⚡ Launch special — only {{ s.lifetime_left }} left</p>
+<div class="pricing-lifetime{% if on %} pricing-lifetime--sale{% endif %}">
+{% if on %}<p class="plan__badge plan__badge--sale">{{ ((p.lifetime_full - p.lifetime_sale) * 100.0 / p.lifetime_full) | round }}% Off, will be ${{ p.lifetime_full }}</p>{% endif %}
 <h3 class="pricing-lifetime__title">Lifetime access</h3>
-<p class="pricing-lifetime__price">${{ p.lifetime_sale }} <span>one-time</span></p>
-<p class="plan__was"><span class="plan__strike">was ${{ p.lifetime_full }}</span> <span class="plan__off">{{ ((p.lifetime_full - p.lifetime_sale) * 100.0 / p.lifetime_full) | round }}% off</span></p>
-<p class="pricing-lifetime__desc">Pay once, access the bot for life. Limited launch quantity at this price.</p>
-<a class="cta-button" href="#contact">Claim lifetime access</a>
+<p class="pricing-lifetime__price">${% if on %}{{ p.lifetime_sale }}{% else %}{{ p.lifetime_full }}{% endif %} <span>one-time</span></p>
+{% if on %}<p class="pricing-lifetime__tag">⚡ Launch special — only {{ s.lifetime_left }} left</p>{% endif %}
+<p class="pricing-lifetime__desc">Pay once, access the bot for life.{% if on %} Limited launch quantity at this price.{% endif %}</p>
+<a class="cta-button" href="#contact">{% if on %}Claim lifetime access{% else %}Ask about lifetime access{% endif %}</a>
 </div>
-{% else %}
-<div class="pricing-lifetime">
-<h3 class="pricing-lifetime__title">Lifetime access</h3>
-<p class="pricing-lifetime__price">${{ p.lifetime_full }} <span>one-time</span></p>
-<p class="pricing-lifetime__desc">Pay once, access the bot for life.</p>
-<a class="cta-button" href="#contact">Ask about lifetime access</a>
-</div>
-{% endif %}

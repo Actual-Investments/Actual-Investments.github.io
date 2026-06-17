@@ -106,8 +106,9 @@ use_toc = false
 <section id="telegram" class="telegram-soon">
   <h2>Telegram signals — coming soon</h2>
   <p class="section-lead">Standalone Telegram signal subscriptions are on the way. Want early access? <a href="#contact">Let us know</a> and we'll tell you the moment they launch.</p>
-  <p class="other-bots-link"><a href="/other-bots/">Looking for a different strategy? →</a></p>
 </section>
+
+<p class="other-bots-link"><a href="/other-bots/">Looking for a different strategy? →</a></p>
 
 <hr>
 

@@ -133,6 +133,7 @@ $phone-max-width: 683px;
   &--featured {
     border-color: var(--accent);
     box-shadow: 0 0 0 1px var(--accent);
+    padding-top: 2.5rem; // room for the badge sitting on the border
   }
 
   &__badge {
@@ -149,6 +150,17 @@ $phone-max-width: 683px;
     border-radius: 1em;
     margin: 0;
     white-space: nowrap;
+  }
+
+  // Sale badge holds more text ("X% Off, will be $Y"), so let it wrap.
+  &__badge--sale {
+    text-transform: none;
+    letter-spacing: 0;
+    white-space: normal;
+    max-width: 90%;
+    text-align: center;
+    font-size: 0.72rem;
+    line-height: 1.3;
   }
 
   &__name {
@@ -404,9 +416,11 @@ details {
 .pricing-lifetime--sale {
   border-color: var(--accent);
   box-shadow: 0 0 0 1px var(--accent);
+  padding-top: 2.6rem; // room for the badge sitting on the border
 }
 
 .pricing-lifetime {
+  position: relative;
   margin-top: 2.5rem;
   border: 2px solid var(--accent);
   border-radius: 0.75rem;
@@ -415,8 +429,15 @@ details {
   background: var(--accent-alpha-20);
 }
 
+.pricing-lifetime > * {
+  // keep every line of the lifetime card centered
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .pricing-lifetime__title {
   margin: 0 0 0.25rem;
+  text-align: center;
 }
 
 .pricing-lifetime__price {
@@ -701,8 +722,9 @@ details {
 }
 
 .other-bots-link {
-  margin: 0.75rem 0 0;
+  margin: 1.25rem 0 0;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 // --- Single verification card ------------------------------------------------
