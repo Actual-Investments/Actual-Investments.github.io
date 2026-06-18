@@ -1,6 +1,6 @@
-# Actual Investments — website
+# Actual Algos — website
 
-This is the website for Actual Investments, a trading-signal service. It is a
+This is the website for Actual Algos, a trading-signal service. It is a
 single landing page with three jobs:
 
 1. Explain the service and pricing.

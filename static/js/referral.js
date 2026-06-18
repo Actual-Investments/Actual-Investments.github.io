@@ -1,5 +1,5 @@
 /* ===========================================================================
- *  Actual Investments — referral tracking + forms + booking widget
+ *  Actual Algos — referral tracking + forms + booking widget
  *
  *  What this does:
  *   1. Reads a referral code from the URL (?ref=CODE, or ?utm_campaign=CODE)

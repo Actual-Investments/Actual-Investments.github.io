@@ -1,5 +1,5 @@
 /* ===========================================================================
- *  Actual Investments — returns projection calculator
+ *  Actual Algos — returns projection calculator
  *
  *  ▼▼▼  EDIT YOUR NUMBERS HERE  ▼▼▼
  *  Everything you'd normally want to change lives in the CONFIG object below.
@@ -293,7 +293,7 @@ var CONFIG = {
       var roiVsFee = share / fee * 100;
       main += row("Challenge fee (one-time)", money(fee));
       main += row("Funded account size", money(size));
-      main += row("Monthly return on strategy", rf(pct(m.monthlyReturn)), "calc__row--divider");
+      main += row("Hypothetical monthly return", rf(pct(m.monthlyReturn)), "calc__row--divider");
       main += row("Gross monthly profit", money(gross));
       main += row("Your share (80% split)", rf(money(share)));
       main += row("Monthly ROI vs challenge fee", rf(pct(roiVsFee)));
@@ -312,8 +312,8 @@ var CONFIG = {
       var monthly = size * r;
       var compounded = size * Math.pow(1 + r, 12);
       main += row("Account size", money(size));
-      main += row("Monthly return on strategy", rf(pct(m.monthlyReturn)), "calc__row--divider");
-      main += row("Estimated monthly profit", rf(money(monthly)));
+      main += row("Hypothetical monthly return", rf(pct(m.monthlyReturn)), "calc__row--divider");
+      main += row("Hypothetical monthly profit", rf(money(monthly)));
       main += row("Projected balance — 12 mo (compounding)", money(compounded));
 
       // Details

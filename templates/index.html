@@ -1,7 +1,9 @@
-{# Landing page template for Actual Investments. Extends the terminimal theme. #}
+{# Landing page template for Actual Algos. Extends the terminimal theme. #}
 {% extends "terminimal/templates/index.html" %}
 
 {% block extra_head %}
+    {# Private brochure — keep it out of public search results. #}
+    <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="{{ get_url(path='custom.css') }}">
     {# Optional background image + adjustable page transparency.
        Set background_image and content_opacity in config.toml to enable. #}
@@ -27,7 +29,7 @@
 
 {# Bigger logo with a clarifying subtitle ("Trading Signals"). #}
 {% block logo_content %}
-    <span class="logo__name">{{ config.extra.logo_text | default(value="Actual Investments") }}</span>
+    <span class="logo__name">{{ config.extra.logo_text | default(value="Actual Algos") }}</span>
     {% if config.extra.logo_subtitle %}<span class="logo__sub">{{ config.extra.logo_subtitle }}</span>{% endif %}
 {% endblock logo_content %}
 
@@ -47,9 +49,11 @@
             <span>&copy; {{ now() | date(format="%Y") }} {{ config.extra.author | default(value=config.title) }}</span>
         </div>
         <p class="footer-disclaimer">
-            Trading involves substantial risk of loss. Signals and information provided
-            are for educational purposes only and are not financial advice.
-            Past performance does not guarantee future results.
+            This site is a private brochure shared by referral and is not an offer or
+            solicitation to the general public. Trading involves substantial risk of
+            loss. Information provided is for educational purposes only and is not
+            financial advice. All performance figures are hypothetical and based on
+            historical backtesting. Past performance does not guarantee future results.
         </p>
     </div>
 </footer>

@@ -1,6 +1,6 @@
 +++
 title = "About"
-description = "The trader and process behind Actual Investments."
+description = "The trader and process behind Actual Algos."
 template = "page.html"
 
 [extra]
@@ -14,9 +14,9 @@ use_toc = false
 <div class="about-head">
   <!-- EDIT ME: replace headshot.svg with your real photo. Drop the file in
        static/img/ (e.g. static/img/headshot.jpg) and update the src below. -->
-  <img class="headshot" src="/img/logo_zoomed_in.png" alt="Actual Investments Logo" width="160" height="160">
+  <img class="headshot" src="/img/logo_zoomed_in.png" alt="Actual Algos Logo" width="160" height="160">
   <div class="about-head__text">
-    <h1>About Actual Investments</h1>
+    <h1>About Actual Algos</h1>
     <p class="section-lead">
       <!-- EDIT ME: one-line positioning statement. -->
       Systematic, alpha-first trading — built on a repeatable process, not hype.
@@ -34,7 +34,7 @@ use_toc = false
   <p>
     <!-- EDIT ME: your story. Replace all of this with your real background. -->
     I've spent 8 years trading just about every asset class, timeframe, and style you can think of. I've given thousands of dollars and thousands of hours of my time to this pursuit. It has taken me to many unexpected places, learning skills across multiple disciplines, and meeting all kinds of interesting people along the way. After years of compounding iteration, trial and error, pain and persistence, I've finally arrived at consistent profitability with algorithmic trading systems.
-    Several months after deploying these systems using my own capital, I created Actual Investments to give others the oppurtunity to access
+    Several months after deploying these systems using my own capital, I created Actual Algos to give others the oppurtunity to access
     the results of this hard work.
   </p>
 </section>

@@ -1,6 +1,6 @@
 +++
 title = "Proof"
-description = "Live, independently-tracked performance and strategy-tester results for the Actual Investments bot."
+description = "Live, independently-tracked performance and strategy-tester results for the Actual Algos bot."
 template = "page.html"
 
 [extra]
@@ -26,7 +26,7 @@ use_toc = false
 
 <h2 style="margin-top:2.5rem">Strategy-tester results</h2>
 
-<p class="section-lead">Backtest results. These are historical and hypothetical where noted, and do not guarantee future performance — see the disclaimer on the home page.</p>
+<p class="section-lead">These are <strong>hypothetical results from historical backtesting</strong>. Backtested results are prepared with hindsight, do not reflect real execution, slippage or fees, and frequently differ from actual trading. They do not guarantee future performance — see the full disclaimer on the home page.</p>
 
 <!-- =======================================================================
      HOW TO ADD A RESULT IMAGE
@@ -35,4 +35,4 @@ use_toc = false
         title and desc are optional (delete them if you don't want them).
      ======================================================================= -->
 
-{{ result(src="/img/results/Grid 2 EURUSD.jpg", title="EURUSD — 7-year backtest", desc="Testing period Oct 01 2017 - May 31 2026. $25,000 Starting Balance, Moderate Risk Level (0.10) starting lot") }}
+{{ result(src="/img/results/Grid 2 EURUSD.jpg", title="EURUSD — 8-year backtest (hypothetical)", desc="Hypothetical backtest. Testing period Sep 01 2017 - May 31 2026. $25,000 starting balance, Moderate risk level (0.10) starting lot.") }}

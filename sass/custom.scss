@@ -1,5 +1,5 @@
 // ===========================================================================
-//  Actual Investments — landing page styles
+//  Actual Algos — landing page styles
 //  Uses the theme's color variables: --accent, --background, --color,
 //  --border-color, --accent-alpha-20, --accent-alpha-70.
 // ===========================================================================
@@ -26,6 +26,19 @@ $phone-max-width: 683px;
 .section-lead {
   opacity: 0.85;
   margin-bottom: 1.5rem;
+}
+
+// Private-brochure banner at the top of the page
+.private-notice {
+  max-width: 46rem;
+  margin: 0 auto 1.5rem;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  border: 1px solid var(--accent-alpha-70);
+  border-radius: 0.5rem;
+  background: var(--accent-alpha-20);
 }
 
 // --- Hero --------------------------------------------------------------------
